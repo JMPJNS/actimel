@@ -21,7 +21,7 @@ int main(void)
 	
     while (1) 
     {
-		_delay_ms(1000);
+		_delay_ms(100);
 		
 		if(direction && PORTA == 0 && PORTC == 0x02) {
 			direction = 0;
