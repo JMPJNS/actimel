@@ -13,50 +13,18 @@
 int main(void)
 {
 	DDRA = 0xFF;
-	DDRC = 0xFF;
+	PORTA = 0x00;
+
 	
-    int direction = 1;
-    PORTC = 0x01;
-    PORTA = 0x00;
+    uint16_t counter = 0;
 	
     while (1) 
     {
-		_delay_ms(100);
-		
-		if(direction && PORTA == 0 && PORTC == 0x02) {
-			direction = 0;
+		if(PORTA == 0xFF) PORTA = 0x00;
+		if(counter == 0xFFFF) {
+			counter = 0;
+			PORTA++;
 		}
-		
-		if(!direction && PORTA == 0x01 && PORTC == 0) {
-			direction = 1;
-		}
-		
-		if(direction && PORTA == 0x80 && PORTC == 0) {
-			PORTA = 0;
-			PORTC = 0x01;
-			continue;
-		}
-		
-		if(!direction && PORTA == 0 && PORTC == 0x01) {
-			PORTA = 0x80;
-			PORTC = 0;
-			continue;
-		}
-		
-		if(PORTC != 0) {
-			if (direction) {
-				PORTC = PORTC << 1;
-				} else {
-				PORTC = PORTC >> 1;
-			}
-		}
-		
-		if(PORTA != 0) {
-			if (direction) {
-				PORTA = PORTA << 1;
-				} else {
-				PORTA = PORTA >> 1;
-			}
-		}
+		counter++;
     }
 }
