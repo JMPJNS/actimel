@@ -3,21 +3,23 @@ Lauflicht.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800200  00800200  000001fa  2**0
+  0 .data         00000002  00800200  00000248  000002dc  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         000001a6  00000000  00000000  00000054  2**1
+  1 .text         00000248  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  000001fa  2**0
+  2 .bss          00000008  00800202  00800202  000002de  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000002de  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000022c  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000310  2**2
                   CONTENTS, READONLY
-  4 .debug_info   00000bbc  00000000  00000000  0000026c  2**0
+  5 .debug_info   00000bbc  00000000  00000000  00000350  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_abbrev 00000b1a  00000000  00000000  00000e28  2**0
+  6 .debug_abbrev 00000b1a  00000000  00000000  00000f0c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   000001f9  00000000  00000000  00001942  2**0
+  7 .debug_line   000001f9  00000000  00000000  00001a26  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_str    000003e6  00000000  00000000  00001b3b  2**0
+  8 .debug_str    000003e6  00000000  00000000  00001c1f  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -25,117 +27,117 @@ Disassembly of section .text:
 00000000 <__vectors>:
    0:	71 c0       	rjmp	.+226    	; 0xe4 <__ctors_end>
    2:	00 00       	nop
-   4:	79 c0       	rjmp	.+242    	; 0xf8 <__bad_interrupt>
+   4:	8e c0       	rjmp	.+284    	; 0x122 <__bad_interrupt>
    6:	00 00       	nop
-   8:	77 c0       	rjmp	.+238    	; 0xf8 <__bad_interrupt>
+   8:	8c c0       	rjmp	.+280    	; 0x122 <__bad_interrupt>
    a:	00 00       	nop
-   c:	75 c0       	rjmp	.+234    	; 0xf8 <__bad_interrupt>
+   c:	8a c0       	rjmp	.+276    	; 0x122 <__bad_interrupt>
    e:	00 00       	nop
-  10:	73 c0       	rjmp	.+230    	; 0xf8 <__bad_interrupt>
+  10:	88 c0       	rjmp	.+272    	; 0x122 <__bad_interrupt>
   12:	00 00       	nop
-  14:	71 c0       	rjmp	.+226    	; 0xf8 <__bad_interrupt>
+  14:	86 c0       	rjmp	.+268    	; 0x122 <__bad_interrupt>
   16:	00 00       	nop
-  18:	6f c0       	rjmp	.+222    	; 0xf8 <__bad_interrupt>
+  18:	84 c0       	rjmp	.+264    	; 0x122 <__bad_interrupt>
   1a:	00 00       	nop
-  1c:	6d c0       	rjmp	.+218    	; 0xf8 <__bad_interrupt>
+  1c:	82 c0       	rjmp	.+260    	; 0x122 <__bad_interrupt>
   1e:	00 00       	nop
-  20:	6b c0       	rjmp	.+214    	; 0xf8 <__bad_interrupt>
+  20:	80 c0       	rjmp	.+256    	; 0x122 <__bad_interrupt>
   22:	00 00       	nop
-  24:	69 c0       	rjmp	.+210    	; 0xf8 <__bad_interrupt>
+  24:	7e c0       	rjmp	.+252    	; 0x122 <__bad_interrupt>
   26:	00 00       	nop
-  28:	67 c0       	rjmp	.+206    	; 0xf8 <__bad_interrupt>
+  28:	7c c0       	rjmp	.+248    	; 0x122 <__bad_interrupt>
   2a:	00 00       	nop
-  2c:	65 c0       	rjmp	.+202    	; 0xf8 <__bad_interrupt>
+  2c:	7a c0       	rjmp	.+244    	; 0x122 <__bad_interrupt>
   2e:	00 00       	nop
-  30:	63 c0       	rjmp	.+198    	; 0xf8 <__bad_interrupt>
+  30:	78 c0       	rjmp	.+240    	; 0x122 <__bad_interrupt>
   32:	00 00       	nop
-  34:	61 c0       	rjmp	.+194    	; 0xf8 <__bad_interrupt>
+  34:	76 c0       	rjmp	.+236    	; 0x122 <__bad_interrupt>
   36:	00 00       	nop
-  38:	5f c0       	rjmp	.+190    	; 0xf8 <__bad_interrupt>
+  38:	74 c0       	rjmp	.+232    	; 0x122 <__bad_interrupt>
   3a:	00 00       	nop
-  3c:	5d c0       	rjmp	.+186    	; 0xf8 <__bad_interrupt>
+  3c:	72 c0       	rjmp	.+228    	; 0x122 <__bad_interrupt>
   3e:	00 00       	nop
-  40:	5b c0       	rjmp	.+182    	; 0xf8 <__bad_interrupt>
+  40:	70 c0       	rjmp	.+224    	; 0x122 <__bad_interrupt>
   42:	00 00       	nop
-  44:	59 c0       	rjmp	.+178    	; 0xf8 <__bad_interrupt>
+  44:	6e c0       	rjmp	.+220    	; 0x122 <__bad_interrupt>
   46:	00 00       	nop
-  48:	57 c0       	rjmp	.+174    	; 0xf8 <__bad_interrupt>
+  48:	6c c0       	rjmp	.+216    	; 0x122 <__bad_interrupt>
   4a:	00 00       	nop
-  4c:	55 c0       	rjmp	.+170    	; 0xf8 <__bad_interrupt>
+  4c:	6a c0       	rjmp	.+212    	; 0x122 <__bad_interrupt>
   4e:	00 00       	nop
-  50:	53 c0       	rjmp	.+166    	; 0xf8 <__bad_interrupt>
+  50:	68 c0       	rjmp	.+208    	; 0x122 <__bad_interrupt>
   52:	00 00       	nop
-  54:	51 c0       	rjmp	.+162    	; 0xf8 <__bad_interrupt>
+  54:	66 c0       	rjmp	.+204    	; 0x122 <__bad_interrupt>
   56:	00 00       	nop
-  58:	4f c0       	rjmp	.+158    	; 0xf8 <__bad_interrupt>
+  58:	64 c0       	rjmp	.+200    	; 0x122 <__bad_interrupt>
   5a:	00 00       	nop
-  5c:	4d c0       	rjmp	.+154    	; 0xf8 <__bad_interrupt>
+  5c:	62 c0       	rjmp	.+196    	; 0x122 <__bad_interrupt>
   5e:	00 00       	nop
-  60:	4b c0       	rjmp	.+150    	; 0xf8 <__bad_interrupt>
+  60:	60 c0       	rjmp	.+192    	; 0x122 <__bad_interrupt>
   62:	00 00       	nop
-  64:	49 c0       	rjmp	.+146    	; 0xf8 <__bad_interrupt>
+  64:	5e c0       	rjmp	.+188    	; 0x122 <__bad_interrupt>
   66:	00 00       	nop
-  68:	47 c0       	rjmp	.+142    	; 0xf8 <__bad_interrupt>
+  68:	5c c0       	rjmp	.+184    	; 0x122 <__bad_interrupt>
   6a:	00 00       	nop
-  6c:	45 c0       	rjmp	.+138    	; 0xf8 <__bad_interrupt>
+  6c:	5a c0       	rjmp	.+180    	; 0x122 <__bad_interrupt>
   6e:	00 00       	nop
-  70:	43 c0       	rjmp	.+134    	; 0xf8 <__bad_interrupt>
+  70:	58 c0       	rjmp	.+176    	; 0x122 <__bad_interrupt>
   72:	00 00       	nop
-  74:	41 c0       	rjmp	.+130    	; 0xf8 <__bad_interrupt>
+  74:	56 c0       	rjmp	.+172    	; 0x122 <__bad_interrupt>
   76:	00 00       	nop
-  78:	3f c0       	rjmp	.+126    	; 0xf8 <__bad_interrupt>
+  78:	54 c0       	rjmp	.+168    	; 0x122 <__bad_interrupt>
   7a:	00 00       	nop
-  7c:	3d c0       	rjmp	.+122    	; 0xf8 <__bad_interrupt>
+  7c:	52 c0       	rjmp	.+164    	; 0x122 <__bad_interrupt>
   7e:	00 00       	nop
-  80:	3b c0       	rjmp	.+118    	; 0xf8 <__bad_interrupt>
+  80:	50 c0       	rjmp	.+160    	; 0x122 <__bad_interrupt>
   82:	00 00       	nop
-  84:	39 c0       	rjmp	.+114    	; 0xf8 <__bad_interrupt>
+  84:	4e c0       	rjmp	.+156    	; 0x122 <__bad_interrupt>
   86:	00 00       	nop
-  88:	37 c0       	rjmp	.+110    	; 0xf8 <__bad_interrupt>
+  88:	4c c0       	rjmp	.+152    	; 0x122 <__bad_interrupt>
   8a:	00 00       	nop
-  8c:	35 c0       	rjmp	.+106    	; 0xf8 <__bad_interrupt>
+  8c:	4a c0       	rjmp	.+148    	; 0x122 <__bad_interrupt>
   8e:	00 00       	nop
-  90:	33 c0       	rjmp	.+102    	; 0xf8 <__bad_interrupt>
+  90:	48 c0       	rjmp	.+144    	; 0x122 <__bad_interrupt>
   92:	00 00       	nop
-  94:	31 c0       	rjmp	.+98     	; 0xf8 <__bad_interrupt>
+  94:	46 c0       	rjmp	.+140    	; 0x122 <__bad_interrupt>
   96:	00 00       	nop
-  98:	2f c0       	rjmp	.+94     	; 0xf8 <__bad_interrupt>
+  98:	44 c0       	rjmp	.+136    	; 0x122 <__bad_interrupt>
   9a:	00 00       	nop
-  9c:	2d c0       	rjmp	.+90     	; 0xf8 <__bad_interrupt>
+  9c:	42 c0       	rjmp	.+132    	; 0x122 <__bad_interrupt>
   9e:	00 00       	nop
-  a0:	2b c0       	rjmp	.+86     	; 0xf8 <__bad_interrupt>
+  a0:	40 c0       	rjmp	.+128    	; 0x122 <__bad_interrupt>
   a2:	00 00       	nop
-  a4:	29 c0       	rjmp	.+82     	; 0xf8 <__bad_interrupt>
+  a4:	3e c0       	rjmp	.+124    	; 0x122 <__bad_interrupt>
   a6:	00 00       	nop
-  a8:	27 c0       	rjmp	.+78     	; 0xf8 <__bad_interrupt>
+  a8:	3c c0       	rjmp	.+120    	; 0x122 <__bad_interrupt>
   aa:	00 00       	nop
-  ac:	25 c0       	rjmp	.+74     	; 0xf8 <__bad_interrupt>
+  ac:	3a c0       	rjmp	.+116    	; 0x122 <__bad_interrupt>
   ae:	00 00       	nop
-  b0:	23 c0       	rjmp	.+70     	; 0xf8 <__bad_interrupt>
+  b0:	38 c0       	rjmp	.+112    	; 0x122 <__bad_interrupt>
   b2:	00 00       	nop
-  b4:	21 c0       	rjmp	.+66     	; 0xf8 <__bad_interrupt>
+  b4:	36 c0       	rjmp	.+108    	; 0x122 <__bad_interrupt>
   b6:	00 00       	nop
-  b8:	1f c0       	rjmp	.+62     	; 0xf8 <__bad_interrupt>
+  b8:	34 c0       	rjmp	.+104    	; 0x122 <__bad_interrupt>
   ba:	00 00       	nop
-  bc:	1d c0       	rjmp	.+58     	; 0xf8 <__bad_interrupt>
+  bc:	32 c0       	rjmp	.+100    	; 0x122 <__bad_interrupt>
   be:	00 00       	nop
-  c0:	1b c0       	rjmp	.+54     	; 0xf8 <__bad_interrupt>
+  c0:	30 c0       	rjmp	.+96     	; 0x122 <__bad_interrupt>
   c2:	00 00       	nop
-  c4:	19 c0       	rjmp	.+50     	; 0xf8 <__bad_interrupt>
+  c4:	2e c0       	rjmp	.+92     	; 0x122 <__bad_interrupt>
   c6:	00 00       	nop
-  c8:	17 c0       	rjmp	.+46     	; 0xf8 <__bad_interrupt>
+  c8:	2c c0       	rjmp	.+88     	; 0x122 <__bad_interrupt>
   ca:	00 00       	nop
-  cc:	15 c0       	rjmp	.+42     	; 0xf8 <__bad_interrupt>
+  cc:	2a c0       	rjmp	.+84     	; 0x122 <__bad_interrupt>
   ce:	00 00       	nop
-  d0:	13 c0       	rjmp	.+38     	; 0xf8 <__bad_interrupt>
+  d0:	28 c0       	rjmp	.+80     	; 0x122 <__bad_interrupt>
   d2:	00 00       	nop
-  d4:	11 c0       	rjmp	.+34     	; 0xf8 <__bad_interrupt>
+  d4:	26 c0       	rjmp	.+76     	; 0x122 <__bad_interrupt>
   d6:	00 00       	nop
-  d8:	0f c0       	rjmp	.+30     	; 0xf8 <__bad_interrupt>
+  d8:	24 c0       	rjmp	.+72     	; 0x122 <__bad_interrupt>
   da:	00 00       	nop
-  dc:	0d c0       	rjmp	.+26     	; 0xf8 <__bad_interrupt>
+  dc:	22 c0       	rjmp	.+68     	; 0x122 <__bad_interrupt>
   de:	00 00       	nop
-  e0:	0b c0       	rjmp	.+22     	; 0xf8 <__bad_interrupt>
+  e0:	20 c0       	rjmp	.+64     	; 0x122 <__bad_interrupt>
 	...
 
 000000e4 <__ctors_end>:
@@ -147,100 +149,172 @@ Disassembly of section .text:
   ee:	cd bf       	out	0x3d, r28	; 61
   f0:	00 e0       	ldi	r16, 0x00	; 0
   f2:	0c bf       	out	0x3c, r16	; 60
-  f4:	02 d0       	rcall	.+4      	; 0xfa <main>
-  f6:	55 c0       	rjmp	.+170    	; 0x1a2 <_exit>
 
-000000f8 <__bad_interrupt>:
-  f8:	83 cf       	rjmp	.-250    	; 0x0 <__vectors>
+000000f4 <__do_copy_data>:
+  f4:	12 e0       	ldi	r17, 0x02	; 2
+  f6:	a0 e0       	ldi	r26, 0x00	; 0
+  f8:	b2 e0       	ldi	r27, 0x02	; 2
+  fa:	e8 e4       	ldi	r30, 0x48	; 72
+  fc:	f2 e0       	ldi	r31, 0x02	; 2
+  fe:	00 e0       	ldi	r16, 0x00	; 0
+ 100:	0b bf       	out	0x3b, r16	; 59
+ 102:	02 c0       	rjmp	.+4      	; 0x108 <__do_copy_data+0x14>
+ 104:	07 90       	elpm	r0, Z+
+ 106:	0d 92       	st	X+, r0
+ 108:	a2 30       	cpi	r26, 0x02	; 2
+ 10a:	b1 07       	cpc	r27, r17
+ 10c:	d9 f7       	brne	.-10     	; 0x104 <__do_copy_data+0x10>
 
-000000fa <main>:
-  fa:	8f ef       	ldi	r24, 0xFF	; 255
-  fc:	81 b9       	out	0x01, r24	; 1
-  fe:	87 b9       	out	0x07, r24	; 7
- 100:	81 e0       	ldi	r24, 0x01	; 1
- 102:	88 b9       	out	0x08, r24	; 8
- 104:	12 b8       	out	0x02, r1	; 2
- 106:	81 e0       	ldi	r24, 0x01	; 1
- 108:	90 e0       	ldi	r25, 0x00	; 0
- 10a:	41 e0       	ldi	r20, 0x01	; 1
- 10c:	50 e8       	ldi	r21, 0x80	; 128
- 10e:	ef e3       	ldi	r30, 0x3F	; 63
- 110:	fc e9       	ldi	r31, 0x9C	; 156
- 112:	31 97       	sbiw	r30, 0x01	; 1
- 114:	f1 f7       	brne	.-4      	; 0x112 <main+0x18>
- 116:	00 c0       	rjmp	.+0      	; 0x118 <main+0x1e>
- 118:	00 00       	nop
- 11a:	89 2b       	or	r24, r25
- 11c:	31 f0       	breq	.+12     	; 0x12a <main+0x30>
- 11e:	82 b1       	in	r24, 0x02	; 2
- 120:	81 11       	cpse	r24, r1
- 122:	09 c0       	rjmp	.+18     	; 0x136 <main+0x3c>
- 124:	88 b1       	in	r24, 0x08	; 8
- 126:	82 30       	cpi	r24, 0x02	; 2
- 128:	31 f4       	brne	.+12     	; 0x136 <main+0x3c>
- 12a:	82 b1       	in	r24, 0x02	; 2
- 12c:	81 30       	cpi	r24, 0x01	; 1
- 12e:	59 f5       	brne	.+86     	; 0x186 <main+0x8c>
- 130:	88 b1       	in	r24, 0x08	; 8
- 132:	81 11       	cpse	r24, r1
- 134:	28 c0       	rjmp	.+80     	; 0x186 <main+0x8c>
- 136:	82 b1       	in	r24, 0x02	; 2
- 138:	80 38       	cpi	r24, 0x80	; 128
- 13a:	41 f4       	brne	.+16     	; 0x14c <main+0x52>
- 13c:	88 b1       	in	r24, 0x08	; 8
- 13e:	81 11       	cpse	r24, r1
- 140:	05 c0       	rjmp	.+10     	; 0x14c <main+0x52>
- 142:	12 b8       	out	0x02, r1	; 2
- 144:	48 b9       	out	0x08, r20	; 8
- 146:	81 e0       	ldi	r24, 0x01	; 1
- 148:	90 e0       	ldi	r25, 0x00	; 0
- 14a:	e1 cf       	rjmp	.-62     	; 0x10e <main+0x14>
- 14c:	81 e0       	ldi	r24, 0x01	; 1
- 14e:	90 e0       	ldi	r25, 0x00	; 0
- 150:	28 b1       	in	r18, 0x08	; 8
- 152:	22 23       	and	r18, r18
- 154:	49 f0       	breq	.+18     	; 0x168 <main+0x6e>
- 156:	28 b1       	in	r18, 0x08	; 8
- 158:	00 97       	sbiw	r24, 0x00	; 0
- 15a:	11 f0       	breq	.+4      	; 0x160 <main+0x66>
- 15c:	22 0f       	add	r18, r18
- 15e:	03 c0       	rjmp	.+6      	; 0x166 <main+0x6c>
- 160:	30 e0       	ldi	r19, 0x00	; 0
- 162:	35 95       	asr	r19
- 164:	27 95       	ror	r18
- 166:	28 b9       	out	0x08, r18	; 8
- 168:	22 b1       	in	r18, 0x02	; 2
- 16a:	22 23       	and	r18, r18
- 16c:	81 f2       	breq	.-96     	; 0x10e <main+0x14>
- 16e:	00 97       	sbiw	r24, 0x00	; 0
- 170:	21 f0       	breq	.+8      	; 0x17a <main+0x80>
- 172:	82 b1       	in	r24, 0x02	; 2
- 174:	88 0f       	add	r24, r24
- 176:	82 b9       	out	0x02, r24	; 2
- 178:	e6 cf       	rjmp	.-52     	; 0x146 <main+0x4c>
- 17a:	22 b1       	in	r18, 0x02	; 2
- 17c:	30 e0       	ldi	r19, 0x00	; 0
- 17e:	35 95       	asr	r19
- 180:	27 95       	ror	r18
- 182:	22 b9       	out	0x02, r18	; 2
- 184:	c4 cf       	rjmp	.-120    	; 0x10e <main+0x14>
- 186:	82 b1       	in	r24, 0x02	; 2
- 188:	81 11       	cpse	r24, r1
- 18a:	08 c0       	rjmp	.+16     	; 0x19c <main+0xa2>
- 18c:	88 b1       	in	r24, 0x08	; 8
- 18e:	81 30       	cpi	r24, 0x01	; 1
- 190:	29 f4       	brne	.+10     	; 0x19c <main+0xa2>
- 192:	52 b9       	out	0x02, r21	; 2
- 194:	18 b8       	out	0x08, r1	; 8
- 196:	80 e0       	ldi	r24, 0x00	; 0
+0000010e <__do_clear_bss>:
+ 10e:	22 e0       	ldi	r18, 0x02	; 2
+ 110:	a2 e0       	ldi	r26, 0x02	; 2
+ 112:	b2 e0       	ldi	r27, 0x02	; 2
+ 114:	01 c0       	rjmp	.+2      	; 0x118 <.do_clear_bss_start>
+
+00000116 <.do_clear_bss_loop>:
+ 116:	1d 92       	st	X+, r1
+
+00000118 <.do_clear_bss_start>:
+ 118:	aa 30       	cpi	r26, 0x0A	; 10
+ 11a:	b2 07       	cpc	r27, r18
+ 11c:	e1 f7       	brne	.-8      	; 0x116 <.do_clear_bss_loop>
+ 11e:	7b d0       	rcall	.+246    	; 0x216 <main>
+ 120:	91 c0       	rjmp	.+290    	; 0x244 <_exit>
+
+00000122 <__bad_interrupt>:
+ 122:	6e cf       	rjmp	.-292    	; 0x0 <__vectors>
+
+00000124 <_Z9inputLoopv>:
+ 124:	86 b1       	in	r24, 0x06	; 6
+ 126:	90 e0       	ldi	r25, 0x00	; 0
+ 128:	80 95       	com	r24
+ 12a:	90 95       	com	r25
+ 12c:	86 95       	lsr	r24
+ 12e:	81 70       	andi	r24, 0x01	; 1
+ 130:	80 93 08 02 	sts	0x0208, r24	; 0x800208 <jumping>
+ 134:	10 92 09 02 	sts	0x0209, r1	; 0x800209 <jumping+0x1>
+ 138:	08 95       	ret
+
+0000013a <_Z12playGameOveri>:
+ 13a:	20 e0       	ldi	r18, 0x00	; 0
+ 13c:	30 e0       	ldi	r19, 0x00	; 0
+ 13e:	4f ef       	ldi	r20, 0xFF	; 255
+ 140:	28 17       	cp	r18, r24
+ 142:	39 07       	cpc	r19, r25
+ 144:	74 f4       	brge	.+28     	; 0x162 <_Z12playGameOveri+0x28>
+ 146:	20 ff       	sbrs	r18, 0
+ 148:	02 c0       	rjmp	.+4      	; 0x14e <_Z12playGameOveri+0x14>
+ 14a:	42 b9       	out	0x02, r20	; 2
+ 14c:	01 c0       	rjmp	.+2      	; 0x150 <_Z12playGameOveri+0x16>
+ 14e:	12 b8       	out	0x02, r1	; 2
+ 150:	ef e3       	ldi	r30, 0x3F	; 63
+ 152:	fc e9       	ldi	r31, 0x9C	; 156
+ 154:	31 97       	sbiw	r30, 0x01	; 1
+ 156:	f1 f7       	brne	.-4      	; 0x154 <_Z12playGameOveri+0x1a>
+ 158:	00 c0       	rjmp	.+0      	; 0x15a <_Z12playGameOveri+0x20>
+ 15a:	00 00       	nop
+ 15c:	2f 5f       	subi	r18, 0xFF	; 255
+ 15e:	3f 4f       	sbci	r19, 0xFF	; 255
+ 160:	ef cf       	rjmp	.-34     	; 0x140 <_Z12playGameOveri+0x6>
+ 162:	08 95       	ret
+
+00000164 <_Z8gameLoopv>:
+ 164:	80 91 04 02 	lds	r24, 0x0204	; 0x800204 <obstaclePosition>
+ 168:	90 91 05 02 	lds	r25, 0x0205	; 0x800205 <obstaclePosition+0x1>
+ 16c:	88 30       	cpi	r24, 0x08	; 8
+ 16e:	91 05       	cpc	r25, r1
+ 170:	34 f4       	brge	.+12     	; 0x17e <_Z8gameLoopv+0x1a>
+ 172:	01 96       	adiw	r24, 0x01	; 1
+ 174:	90 93 05 02 	sts	0x0205, r25	; 0x800205 <obstaclePosition+0x1>
+ 178:	80 93 04 02 	sts	0x0204, r24	; 0x800204 <obstaclePosition>
+ 17c:	08 95       	ret
+ 17e:	80 91 02 02 	lds	r24, 0x0202	; 0x800202 <__data_end>
+ 182:	90 91 03 02 	lds	r25, 0x0203	; 0x800203 <__data_end+0x1>
+ 186:	01 96       	adiw	r24, 0x01	; 1
+ 188:	90 93 03 02 	sts	0x0203, r25	; 0x800203 <__data_end+0x1>
+ 18c:	80 93 02 02 	sts	0x0202, r24	; 0x800202 <__data_end>
+ 190:	88 b1       	in	r24, 0x08	; 8
+ 192:	82 30       	cpi	r24, 0x02	; 2
+ 194:	39 f4       	brne	.+14     	; 0x1a4 <_Z8gameLoopv+0x40>
+ 196:	8a e0       	ldi	r24, 0x0A	; 10
  198:	90 e0       	ldi	r25, 0x00	; 0
- 19a:	b9 cf       	rjmp	.-142    	; 0x10e <main+0x14>
- 19c:	80 e0       	ldi	r24, 0x00	; 0
- 19e:	90 e0       	ldi	r25, 0x00	; 0
- 1a0:	d7 cf       	rjmp	.-82     	; 0x150 <main+0x56>
+ 19a:	cf df       	rcall	.-98     	; 0x13a <_Z12playGameOveri>
+ 19c:	10 92 03 02 	sts	0x0203, r1	; 0x800203 <__data_end+0x1>
+ 1a0:	10 92 02 02 	sts	0x0202, r1	; 0x800202 <__data_end>
+ 1a4:	10 92 05 02 	sts	0x0205, r1	; 0x800205 <obstaclePosition+0x1>
+ 1a8:	10 92 04 02 	sts	0x0204, r1	; 0x800204 <obstaclePosition>
+ 1ac:	08 95       	ret
 
-000001a2 <_exit>:
- 1a2:	f8 94       	cli
+000001ae <_Z11setObstaclei>:
+ 1ae:	92 b1       	in	r25, 0x02	; 2
+ 1b0:	20 e8       	ldi	r18, 0x80	; 128
+ 1b2:	30 e0       	ldi	r19, 0x00	; 0
+ 1b4:	02 c0       	rjmp	.+4      	; 0x1ba <_Z11setObstaclei+0xc>
+ 1b6:	35 95       	asr	r19
+ 1b8:	27 95       	ror	r18
+ 1ba:	8a 95       	dec	r24
+ 1bc:	e2 f7       	brpl	.-8      	; 0x1b6 <_Z11setObstaclei+0x8>
+ 1be:	29 2b       	or	r18, r25
+ 1c0:	22 b9       	out	0x02, r18	; 2
+ 1c2:	08 95       	ret
 
-000001a4 <__stop_program>:
- 1a4:	ff cf       	rjmp	.-2      	; 0x1a4 <__stop_program>
+000001c4 <_Z8drawLoopv>:
+ 1c4:	80 91 08 02 	lds	r24, 0x0208	; 0x800208 <jumping>
+ 1c8:	90 91 09 02 	lds	r25, 0x0209	; 0x800209 <jumping+0x1>
+ 1cc:	89 2b       	or	r24, r25
+ 1ce:	99 f0       	breq	.+38     	; 0x1f6 <_Z8drawLoopv+0x32>
+ 1d0:	80 91 06 02 	lds	r24, 0x0206	; 0x800206 <currentJumpFrame>
+ 1d4:	90 91 07 02 	lds	r25, 0x0207	; 0x800207 <currentJumpFrame+0x1>
+ 1d8:	20 91 00 02 	lds	r18, 0x0200	; 0x800200 <__DATA_REGION_ORIGIN__>
+ 1dc:	30 91 01 02 	lds	r19, 0x0201	; 0x800201 <__DATA_REGION_ORIGIN__+0x1>
+ 1e0:	82 17       	cp	r24, r18
+ 1e2:	93 07       	cpc	r25, r19
+ 1e4:	44 f4       	brge	.+16     	; 0x1f6 <_Z8drawLoopv+0x32>
+ 1e6:	01 96       	adiw	r24, 0x01	; 1
+ 1e8:	90 93 07 02 	sts	0x0207, r25	; 0x800207 <currentJumpFrame+0x1>
+ 1ec:	80 93 06 02 	sts	0x0206, r24	; 0x800206 <currentJumpFrame>
+ 1f0:	83 e0       	ldi	r24, 0x03	; 3
+ 1f2:	88 b9       	out	0x08, r24	; 8
+ 1f4:	07 c0       	rjmp	.+14     	; 0x204 <_Z8drawLoopv+0x40>
+ 1f6:	10 92 07 02 	sts	0x0207, r1	; 0x800207 <currentJumpFrame+0x1>
+ 1fa:	10 92 06 02 	sts	0x0206, r1	; 0x800206 <currentJumpFrame>
+ 1fe:	82 e0       	ldi	r24, 0x02	; 2
+ 200:	88 b9       	out	0x08, r24	; 8
+ 202:	10 9a       	sbi	0x02, 0	; 2
+ 204:	80 91 04 02 	lds	r24, 0x0204	; 0x800204 <obstaclePosition>
+ 208:	90 91 05 02 	lds	r25, 0x0205	; 0x800205 <obstaclePosition+0x1>
+ 20c:	d0 df       	rcall	.-96     	; 0x1ae <_Z11setObstaclei>
+ 20e:	80 91 02 02 	lds	r24, 0x0202	; 0x800202 <__data_end>
+ 212:	85 b9       	out	0x05, r24	; 5
+ 214:	08 95       	ret
+
+00000216 <main>:
+ 216:	8f ef       	ldi	r24, 0xFF	; 255
+ 218:	81 b9       	out	0x01, r24	; 1
+ 21a:	84 b9       	out	0x04, r24	; 4
+ 21c:	81 e0       	ldi	r24, 0x01	; 1
+ 21e:	87 b9       	out	0x07, r24	; 7
+ 220:	85 e0       	ldi	r24, 0x05	; 5
+ 222:	90 e0       	ldi	r25, 0x00	; 0
+ 224:	8a df       	rcall	.-236    	; 0x13a <_Z12playGameOveri>
+ 226:	2f ef       	ldi	r18, 0xFF	; 255
+ 228:	89 ef       	ldi	r24, 0xF9	; 249
+ 22a:	90 e0       	ldi	r25, 0x00	; 0
+ 22c:	21 50       	subi	r18, 0x01	; 1
+ 22e:	80 40       	sbci	r24, 0x00	; 0
+ 230:	90 40       	sbci	r25, 0x00	; 0
+ 232:	e1 f7       	brne	.-8      	; 0x22c <main+0x16>
+ 234:	00 c0       	rjmp	.+0      	; 0x236 <main+0x20>
+ 236:	00 00       	nop
+ 238:	12 b8       	out	0x02, r1	; 2
+ 23a:	18 b8       	out	0x08, r1	; 8
+ 23c:	73 df       	rcall	.-282    	; 0x124 <_Z9inputLoopv>
+ 23e:	c2 df       	rcall	.-124    	; 0x1c4 <_Z8drawLoopv>
+ 240:	91 df       	rcall	.-222    	; 0x164 <_Z8gameLoopv>
+ 242:	f1 cf       	rjmp	.-30     	; 0x226 <main+0x10>
+
+00000244 <_exit>:
+ 244:	f8 94       	cli
+
+00000246 <__stop_program>:
+ 246:	ff cf       	rjmp	.-2      	; 0x246 <__stop_program>
