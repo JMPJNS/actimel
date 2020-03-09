@@ -164,7 +164,7 @@ Disassembly of section .text:
  108:	09 f4       	brne	.+2      	; 0x10c <main+0x12>
  10a:	12 b8       	out	0x02, r1	; 2
  10c:	8f 3f       	cpi	r24, 0xFF	; 255
- 10e:	2f ef       	ldi	r18, 0xFF	; 255
+ 10e:	2f e0       	ldi	r18, 0x0F	; 15
  110:	92 07       	cpc	r25, r18
  112:	29 f4       	brne	.+10     	; 0x11e <main+0x24>
  114:	82 b1       	in	r24, 0x02	; 2
